@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #020712;
+    color: #d6f4ff;
+  }
+}
+
+.font-mono-tech {
+  font-family: 'Share Tech Mono', monospace, monospace;
+}
+
+/* Sci-fi HUD Background Grid */
+.hud-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0, 240, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Radial Glow Backdrops */
+.radial-hud-glow {
+  background: radial-gradient(circle at 50% 45%, rgba(0, 240, 255, 0.12) 0%, rgba(2, 7, 18, 0.95) 70%);
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(2, 11, 24, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 50px rgba(0, 240, 255, 0.65));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s infinite ease-in-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scanline-scroll {
+  from { background-position: 0 0; }
+  to { background-position: 0 100%; }
+}
+
+

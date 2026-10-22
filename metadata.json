@@ -1,0 +1,10 @@
+{
+  "name": "Remix  ATLAS",
+  "description": "Sesli Türkçe yapay zekâ asistanı, büyük holografik enerji küresi, eller serbest \u0027ATLAS\u0027 uyandırma modu ve akıllı araç altyapısı.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

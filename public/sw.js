@@ -1,0 +1,16 @@
+self.addEventListener('install', (event) => {
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(self.clients.claim());
+});
+
+self.addEventListener('fetch', (event) => {
+  // Basit cache önbelleği: sadece GET istekleri
+  if (event.request.method !== 'GET') return;
+
+  event.respondWith(
+    fetch(event.request).catch(() => caches.match(event.request))
+  );
+});
